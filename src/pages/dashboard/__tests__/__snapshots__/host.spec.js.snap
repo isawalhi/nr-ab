@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Host generates html when host is provided correctly 1`] = `
+"
+        <div id=test-host class=\\"host-card\\">
+          <div class=\\"host-name\\">test-host</div>
+          <div class=\\"applications\\">
+            
+        <div key=\\"test-app2\\" release-version=\\"1\\" class=\\"application\\">
+            <div class=\\"app-apdex\\">99</div>
+            <div class=\\"app-name\\">test-app2</div>
+        </div>
+        
+        <div key=\\"test-app\\" release-version=\\"1\\" class=\\"application\\">
+            <div class=\\"app-apdex\\">89</div>
+            <div class=\\"app-name\\">test-app</div>
+        </div>
+        
+          </div>
+        </div>
+        "
+`;

@@ -1,0 +1,2 @@
+export const NUMBER_OF_TOP_APPLICATIONS = 25;
+export const NUMBER_OF_APPS_PER_HOST_CARD = 5;

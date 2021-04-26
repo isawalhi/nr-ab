@@ -3,13 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: ['@babel/polyfill','./src/index.ts'],
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
+  devtool: 'source-map',
   devServer: {
     open: true,
     host: 'localhost',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,8 +23,31 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', {
+                targets: {
+                  browsers: [ "last 2 version", "ie >= 11" ]
+                },
+                useBuiltIns: 'usage',
+                corejs: 3
+              }]
+            ]
+          }
+        }
+      },
+      { test: /\.tsx?$/, loader: "ts-loader" },
+      {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/,
         type: 'asset',
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

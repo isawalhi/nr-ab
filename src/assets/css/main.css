@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url('../fonts/helvetica-neue.woff') format('truetype');
+}
+
+@font-face {
+    font-family: "Helvetica Neue-Bold";
+    src: url('../fonts/helvetica-neue-bold.woff') format('truetype');
+}
+
+:root {
+    --grey: #4A4A4A;
+    --sm-line-height: 19px;
+    --base-line-height: 22px;
+    --title-line-height: 43px;
+
+    --base-font-size: 16px;
+    --title-font-size: 35px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    line-height: 19px;
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+#dashboard-wrapper {
+    width: 840px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/******************** Header Start ************************/
+
+#dashboard-wrapper .header-wrapper {
+  display: flex;
+  align-items: flex-end;  
+} 
+
+#dashboard-wrapper .header-title{
+    font-size: 35px;
+    line-height: 43px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-family: "Helvetica Neue-Bold", sans-serif;
+}
+
+#dashboard-wrapper .user-info{
+    flex: 1;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 22px;
+}
+
+#dashboard-wrapper #layout-toggel-wrapper {
+    margin-left: 30px;
+}
+
+#layout-toggel-wrapper > label,
+#layout-toggel-wrapper > input { 
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+
+/******************** Header End ************************/
+
+/******************* Dashboard Start ********************/
+
+#dashboard-wrapper #hosts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    justify-content: space-between;
+}
+
+#dashboard-wrapper #hosts-wrapper.grid {
+    flex-direction: row;
+}
+
+#dashboard-wrapper #hosts-wrapper.list {
+    flex-direction: column;
+}
+
+/******************* Dashboard Start ********************/
+
+/******************** Host Start ************************/
+
+#dashboard-wrapper #hosts-wrapper.grid .host-card {
+    width: 375px;
+}
+
+#dashboard-wrapper #hosts-wrapper .host-card {
+    padding: 30px;
+    margin: 15px 0;
+    background-color: #fff;
+    /* Dosn't work on IE11, however the view is acceptable there */
+    height: fit-content; 
+}
+
+#dashboard-wrapper #hosts-wrapper .host-card .host-name {
+    font-size: 16px;
+    font-family: "Helvetica Neue-Bold", sans-serif;
+}
+
+#hosts-wrapper .host-card .applications {
+    list-style: none;
+}
+
+/******************** Hosts End ************************/
+
+/***************** Application Start *******************/
+
+#hosts-wrapper .applications .application {
+    display: flex;
+    padding-top: 23px;
+    cursor: pointer;
+}
+
+#hosts-wrapper .application .app-apdex {
+    opacity: 0.62;
+    font-size: 13px;
+    margin-right: 20px;
+    color: #4A4A4A;
+    font-family: "Helvetica Neue-Bold", sans-serif;
+}
+
+#hosts-wrapper .application .app-name {
+    color: #4A4A4A;
+    font-size: 16px;
+    font-family: "Helvetica Neue", sans-serif;;
+}
+
+/***************** Application End *******************/
+

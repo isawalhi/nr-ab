@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application generates html when application is provided correctly 1`] = `
+"
+        <div key=\\"test-app\\" release-version=\\"1\\" class=\\"application\\">
+            <div class=\\"app-apdex\\">89</div>
+            <div class=\\"app-name\\">test-app</div>
+        </div>
+        "
+`;
+
+exports[`Application return empty html when application is not provided correctly 1`] = `""`;

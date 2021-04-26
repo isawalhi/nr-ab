@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard generates html when dashboard is provided correctly 1`] = `Promise {}`;
