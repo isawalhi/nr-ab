@@ -1,6 +1,6 @@
-# New Relic Apdex Board - Code Challange
+# Apdex Board - Code Challange
 
-New Relci Apdex Board is a application that provides a dashboard of hosted applications
+Apdex Board is a application that provides a dashboard of hosted applications
 
 ## Usage
 
